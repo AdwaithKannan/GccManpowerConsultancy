@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -89,7 +89,7 @@
           <h2>Contact</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Contact</li>
+            <li>Contact form for Employers</li>
           </ol>
         </div>
 
@@ -97,10 +97,7 @@
     </section><!-- End Breadcrumbs -->
 
     <!-- ======= Contact Section ======= -->
-    <div class="map-section">
-      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IBCAzeu0ZvtVLRP5u-K8iCvnWQREfWk2" width="100%" height="480"></iframe>
-    </div>
-
+   
     <section id="contact" class="contact">
       <div class="container">
 
@@ -139,17 +136,37 @@
             <form id="submit-form" action="">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Company Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder=" Email address" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Sector of vacancy" data-rule="" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="No of vacancy" data-rule="" data-msg="Please enter at least 4 chars" />
+                    <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Employer Name" data-rule="" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Employee Mail Address" data-rule="" data-msg="Please enter at least 4 chars" />
+                    <div class="validate"></div>
+                </div>
               </div>
               <div class="form-group">
                 <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
@@ -261,7 +278,7 @@
     $("#submit-form").submit((e)=>{
         e.preventDefault()
         $.ajax({
-            url:"https://script.google.com/macros/s/AKfycbyPEbIekLfNjM3Ce8fgLCJvLNrjuKKzAoY2KaEXX0fKkRrrDdiCK-Zko-yS7nQy2Gra/exec",
+            url:"https://script.google.com/macros/s/AKfycbxnjkrlUlQb6GvvHW3iltkA11E322UfU8nzQEWRcq0dn03V--Vy75XMIIHiV-MliQcp/exec",
             data:$("#submit-form").serialize(),
             method:"post",
             success:function (response){
