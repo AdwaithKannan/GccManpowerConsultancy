@@ -42,7 +42,7 @@
   <section id="topbar" class="d-none d-lg-block">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i><a href="mailto:gccmanpowerconsultancy@gmail.com">gccmanpowerconsultancy@gmail.com</a>
+        <i class="icofont-envelope"></i><a href="mailto:info@gccmanpowerconsultant.com">info@gccmanpowerconsultant.com</a>
         <i class="icofont-phone"></i>7034188756, 00971526391697 , 00917034188756
       </div>
       <div class="social-links">
@@ -119,7 +119,7 @@
                 <div class="col-lg-4 info mt-4 mt-lg-0">
                   <i class="icofont-envelope"></i>
                   <h4>Email:</h4>
-                  <p>gccmanpowerconsultancy@gmail.com<br></p>
+                  <p>info@gccmanpowerconsultant.com<br></p>
                 </div>
 
                 <div class="col-lg-4 info mt-4 mt-lg-0">
@@ -136,29 +136,34 @@
 
         <div class="row mt-5 justify-content-center" data-aos="fade-up">
           <div class="col-lg-10">
-            <form id="submit-form" action="">
+            <form id="submit-form" action="" >
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <label for="name"> Name</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <label for="Email">Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"  required/>
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
                 <div class="validate"></div>
               </div>
               
                
              
-              <div class="text-center"><button type="submit">Submit</button></div>
+              <div class="text-center"><button type="submit" class="btn btn-outline-warning">Submit</button></div>
+              
             </form>
           </div>
 
@@ -187,7 +192,7 @@
               <li>NH-16,RAMBHA(GANJAM)<br>ODISHA</li>
             </ul>
               <strong>Phone:</strong> 00971526391697 , 00917034188756<br>
-              <strong>Email:</strong> gccmanpowerconsultancy@gmail.com<br>
+              <strong>Email:</strong> info@gccmanpowerconsultant.com <br>
             </p>
           </div>
 
@@ -261,7 +266,7 @@
     $("#submit-form").submit((e)=>{
         e.preventDefault()
         $.ajax({
-            url:"https://script.google.com/macros/s/AKfycbyPEbIekLfNjM3Ce8fgLCJvLNrjuKKzAoY2KaEXX0fKkRrrDdiCK-Zko-yS7nQy2Gra/exec",
+            url:"https://script.google.com/macros/s/AKfycbyynjmZ9bRJQsrNYAjlCvTCueUytvO3hPw-Yxjm59jfcnBpTlnuErfI_GHpPXD22XjR/exec",
             data:$("#submit-form").serialize(),
             method:"post",
             success:function (response){
@@ -276,6 +281,25 @@
         })
     })
 </script>
+<!-- <script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function sendEmail()
+{
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "Gccmanpower2022@gmail.com",
+    Password : "power2022",
+    To : 'adwaithkannanpkda@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Enquiry",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+}
+
+</script> -->
 </body>
 
 </html>
