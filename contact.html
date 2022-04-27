@@ -266,7 +266,7 @@
     $("#submit-form").submit((e)=>{
         e.preventDefault()
         $.ajax({
-            url:"https://script.google.com/macros/s/AKfycbyynjmZ9bRJQsrNYAjlCvTCueUytvO3hPw-Yxjm59jfcnBpTlnuErfI_GHpPXD22XjR/exec",
+            url:"https://script.google.com/macros/s/AKfycbzNCigXcGLHKq5uudRpjHIy04Wu_BHtRgUeVy9Gp6NZmz2xByWOSnu6wXzWuTYABEJc/exec",
             data:$("#submit-form").serialize(),
             method:"post",
             success:function (response){
@@ -281,25 +281,5 @@
         })
     })
 </script>
-<!-- <script src=" https://smtpjs.com/v3/smtp.js"></script>
-<script>
-function sendEmail()
-{
-  Email.send({
-    Host : "smtp.gmail.com",
-    Username : "Gccmanpower2022@gmail.com",
-    Password : "power2022",
-    To : 'adwaithkannanpkda@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New Enquiry",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-
-}
-
-</script> -->
 </body>
-
 </html>
